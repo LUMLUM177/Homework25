@@ -1,4 +1,4 @@
-public abstract class Driver<A extends Cars & Competing> {
+public abstract class Driver<A> {
 
     private String name;
     private boolean isDriverLicense = true;

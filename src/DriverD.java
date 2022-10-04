@@ -1,4 +1,4 @@
-public class DriverD<A extends Bus & Competing> extends Driver {
+public class DriverD<A extends Bus & Competing> extends Driver<A> {
 
     public DriverD(String name, boolean driverLicense, int experience) {
         super(name, driverLicense, experience);
@@ -6,21 +6,21 @@ public class DriverD<A extends Bus & Competing> extends Driver {
 
 
     @Override
-    public void start(Cars cars) {
+    public void start(A a) {
         System.out.print(this.getName() + " на ");
-        cars.startMoving();
+        a.startMoving();
     }
 
     @Override
-    public void stop(Cars cars) {
+    public void stop(A a) {
         System.out.print(this.getName() + " на ");
-        cars.finishMoving();
+        a.finishMoving();
     }
 
     @Override
-    public void refill(Cars cars) {
+    public void refill(A a) {
         System.out.print(this.getName() + " на ");
-        cars.pitStop();
+        a.pitStop();
     }
 
     public void getInTheCar(A bus) {

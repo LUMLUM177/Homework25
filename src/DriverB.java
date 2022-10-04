@@ -1,25 +1,25 @@
-public class DriverB<A extends Auto & Competing> extends Driver {
+public class DriverB<A extends Auto & Competing> extends Driver<A> {
 
     public DriverB(String name, boolean driverLicense, int experience) {
         super(name, driverLicense, experience);
     }
 
     @Override
-    public void start(Cars cars) {
+    public void start(A a) {
         System.out.print(this.getName() + " на ");
-        cars.startMoving();
+        a.startMoving();
     }
 
     @Override
-    public void stop(Cars cars) {
+    public void stop(A a) {
         System.out.print(this.getName() + " на ");
-        cars.finishMoving();
+        a.finishMoving();
     }
 
     @Override
-    public void refill(Cars cars) {
+    public void refill(A a) {
         System.out.print(this.getName() + " на ");
-        cars.pitStop();
+        a.pitStop();
     }
 
     public void getInTheCar(A auto) {

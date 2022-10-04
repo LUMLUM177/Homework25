@@ -27,11 +27,11 @@ public class Main {
         audi.pitStop();
         System.out.println();
 
-        DriverB john = new DriverB("John", true, 5);
+        DriverB<Auto> john = new DriverB<>("John", true, 5);
         john.getInTheCar(hyundai);
-        DriverC philipp = new DriverC("Philipp", false, 7);
+        DriverC<Trucks> philipp = new DriverC<>("Philipp", false, 7);
         philipp.getInTheCar(gazelle);
-        DriverD elza = new DriverD("Elza", true, 10);
+        DriverD<Bus> elza = new DriverD<>("Elza", true, 10);
         elza.getInTheCar(mercedez);
 
         System.out.println();
