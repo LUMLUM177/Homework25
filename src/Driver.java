@@ -1,4 +1,4 @@
-public abstract class Driver {
+public abstract class Driver<A extends Cars & Competing> {
 
     private String name;
     private boolean isDriverLicense = true;
@@ -10,13 +10,17 @@ public abstract class Driver {
         setExperience(experience);
     }
 
+    public abstract void start(A cars);
+    public abstract void stop(A cars);
+    public abstract void refill(A cars);
+
 
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        if (name == null || name.isEmpty() || name.isBlank()) {
+        if (name == null || name.isBlank()) {
             this.name = "default";
         } else {
             this.name = name;

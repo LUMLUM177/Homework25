@@ -4,19 +4,22 @@ public class DriverB<A extends Auto & Competing> extends Driver {
         super(name, driverLicense, experience);
     }
 
-    public void start(A auto) {
+    @Override
+    public void start(Cars cars) {
         System.out.print(this.getName() + " на ");
-        auto.startMoving();
+        cars.startMoving();
     }
 
-    public void stop(A auto) {
+    @Override
+    public void stop(Cars cars) {
         System.out.print(this.getName() + " на ");
-        auto.finishMoving();
+        cars.finishMoving();
     }
 
-    public void refill(A auto) {
+    @Override
+    public void refill(Cars cars) {
         System.out.print(this.getName() + " на ");
-        auto.pitStop();
+        cars.pitStop();
     }
 
     public void getInTheCar(A auto) {

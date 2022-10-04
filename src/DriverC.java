@@ -5,21 +5,22 @@ public class DriverC<A extends Trucks & Competing> extends Driver {
     }
 
 
-    public void start(A trucks) {
+    @Override
+    public void start(Cars cars) {
         System.out.print(this.getName() + " на ");
-        trucks.startMoving();
+        cars.startMoving();
     }
 
-
-    public void stop(A trucks) {
+    @Override
+    public void stop(Cars cars) {
         System.out.print(this.getName() + " на ");
-        trucks.finishMoving();
+        cars.finishMoving();
     }
 
-
-    public void refill(A trucks) {
+    @Override
+    public void refill(Cars cars) {
         System.out.print(this.getName() + " на ");
-        trucks.pitStop();
+        cars.pitStop();
     }
 
     public void getInTheCar(A trucks) {

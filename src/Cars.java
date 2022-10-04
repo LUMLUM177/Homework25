@@ -1,4 +1,4 @@
-public abstract class Cars {
+public abstract class Cars implements Competing{
 
     private String brand;
     private String model;
@@ -15,7 +15,7 @@ public abstract class Cars {
     }
 
     public void setBrand(String brand) {
-        if (brand == null || brand.isEmpty() || brand.isBlank()) {
+        if (brand == null || brand.isBlank()) {
             this.brand = "default";
         } else {
             this.brand = brand;
@@ -27,7 +27,7 @@ public abstract class Cars {
     }
 
     public void setModel(String model) {
-        if (model == null || model.isEmpty() || model.isBlank()) {
+        if (model == null || model.isBlank()) {
             this.model = "default";
         } else {
             this.model = model;
